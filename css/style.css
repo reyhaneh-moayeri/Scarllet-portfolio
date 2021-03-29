@@ -216,6 +216,14 @@ p.content-p {
     transform-origin: left;
 }
 
+
+/* @media screen and (max-width: 900px) {
+    #showcase {
+        background-position: 100%;
+        background-size: cover;
+    }
+} */
+
 @media screen and (max-width: 610px) {
     #header {
         position: absolute;
@@ -254,15 +262,24 @@ p.content-p {
         transition: all 0.4s ease-in-out;
     }
     .header-main-nav-links {
+        width: 30rem;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
     }
     .header-main-nav-links li {
-        margin-bottom: 4vh;
+        height: 100%;
+        margin-bottom: 2vh;
+        align-self: flex-start;
+        justify-self: self-start;
+        font-weight: 600;
+    }
+    .header-main-nav-links li:first-child {
+        margin-top: 20px;
     }
     .clicked .line1 {
         transform: rotateZ(315deg) translate(-0.7rem, 0.5rem);
