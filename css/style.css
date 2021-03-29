@@ -147,12 +147,24 @@ section#showcase {
 }
 
 .showcase-container {
-    height: calc(5rem + 20vmax);
+    height: calc(6rem + 18vmax);
     padding: calc(1rem + 3vw);
     background-color: var(--secondary-m);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: hero 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes hero {
+    0% {
+        transform: translateX(100rem) rotate(360deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 h1.showcase-content-title {
@@ -164,6 +176,44 @@ p.content-p {
     font-family: "indie Flower", cursive;
     font-size: calc(1.5rem + 1vw);
     color: white;
+}
+
+#showcase a {
+    width: 10rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    padding: 0.4rem 0.7rem;
+    z-index: 1;
+}
+
+#showcase a:link::after,
+#showcase a:visited::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: -1;
+}
+
+
+/* #showcase a:link::before {
+    left: 0;
+} */
+
+#showcase a:hover::after,
+#showcase a:active::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 @media screen and (max-width: 610px) {
