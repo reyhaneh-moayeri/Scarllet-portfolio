@@ -11,6 +11,7 @@
     --primary-color: #6c5ce7;
     --secondary-color: #fd9644;
     --secondary-m: #c98c08;
+    font-size: 62.5%;
 }
 
 body {
@@ -386,9 +387,169 @@ div.work__card img:hover {
     transform: scaleX(1);
 }
 
+
+/* Skills Section */
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #273c75;
+}
+
+.coding_skill,
+.design_skill {
+    flex-basis: 40rem;
+    flex-grow: 1;
+    padding: calc(1rem + 2vw);
+    text-transform: uppercase;
+}
+
+.design_skill_title,
+.coding_skill_title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.coding_skill h4,
+.design_skill h4 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.design_skill_progress,
+.coding_skill_progress {
+    position: relative;
+    display: block;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.design_skill_progress span,
+.coding_skill_progress span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.design_skill_progress_1 {
+    animation: design-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.design_skill_progress_2 {
+    animation: design-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.design_skill_progress_3 {
+    animation: design-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.design_skill_progress_4 {
+    animation: design-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes design-4 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.coding_skill_progress_1 {
+    animation: coding-1 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-1 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.coding_skill_progress_2 {
+    animation: coding-2 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-2 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.coding_skill_progress_3 {
+    animation: coding-3 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-3 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.coding_skill_progress_4 {
+    animation: coding-4 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes coding-4 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
 @media screen and (max-width: 900px) {
     #showcase {
-        background-position: 100%;
+        background-position: 100px;
+    }
+    .showcase-container {
+        position: absolute;
+        bottom: 0;
     }
 }
 
