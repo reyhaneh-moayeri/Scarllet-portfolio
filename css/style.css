@@ -38,7 +38,7 @@ aside#side_nav {
 }
 
 div.side_nav_content {
-    height: 100%ui786ytrfdx;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -53,6 +53,7 @@ div.side_nav_logo img {
 }
 
 div.side_nav_social_icons {
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,13 +221,13 @@ p.content-p {
     background-color: var(--primary-color);
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
 div.work__card {
-    flex-basis: 40rem;
-    padding: 2rem;
-    flex-grow: 1;
+    flex-basis: 38rem;
+    padding-right: 2rem;
 }
 
 div.work__card img {
@@ -307,7 +308,7 @@ div.work__card img:hover {
     background-image: linear-gradient(135deg, #e2b0ff 10%, #9f44d3 100%);
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: transform 0.45s ease;
+    transition: transform 0.6s ease;
     z-index: -1;
 }
 
@@ -317,6 +318,74 @@ div.work__card img:hover {
     transform-origin: top;
 }
 
+
+/* services section */
+
+#services {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+}
+
+.service {
+    flex-grow: 1;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem;
+    width: 37rem;
+    height: 28rem;
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    border-left: 0.3rem solid var(--secondary-color);
+    border-right: 0.3rem solid var(--secondary-color);
+    border-bottom: 0.3rem solid var(--secondary-color);
+}
+
+.service i {
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.service .title {
+    font-size: 2.5rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+.service p {
+    font-size: 2rem;
+    font-family: indie Flower, cursive;
+    line-height: 3.2rem;
+}
+
+.service::after {
+    background-color: rgb(130, 30, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform 0.45s ease;
+    transform-origin: center;
+}
+
+.service:hover::after {
+    transform: scaleX(1);
+}
+
 @media screen and (max-width: 900px) {
     #showcase {
         background-position: 100%;
@@ -324,6 +393,12 @@ div.work__card img:hover {
 }
 
 @media screen and (max-width: 610px) {
+    .service p {
+        font-size: calc(1.2rem + 1vw);
+    }
+    #services {
+        padding: 1vw;
+    }
     #header {
         position: absolute;
     }
@@ -344,8 +419,8 @@ div.work__card img:hover {
         height: 5rem;
         background-color: var(--secondary-color);
         position: fixed;
-        top: 1rem;
-        right: 3rem;
+        top: 2rem;
+        right: 4rem;
         border-radius: 50%;
         cursor: pointer;
         padding: 1rem;
