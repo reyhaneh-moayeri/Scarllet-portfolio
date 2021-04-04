@@ -657,8 +657,8 @@ input[type="submit"] {
 }
 
 @media screen and (max-width: 900px) {
-    #showcase {
-        background-position: 100px;
+    section#showcase {
+        background-position: 100%;
     }
     .showcase-container {
         position: absolute;
@@ -765,5 +765,11 @@ input[type="submit"] {
     }
     .card-content {
         padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section#contact {
+        background-position: 10% 5%;
     }
 }
