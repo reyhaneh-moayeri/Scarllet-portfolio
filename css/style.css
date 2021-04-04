@@ -623,7 +623,7 @@ div.work__card img:hover {
     flex-basis: 40rem;
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-color);
+    background-color: hsl(240, 52%, 61%, 0.6);
 }
 
 .contact_form input,
