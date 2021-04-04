@@ -39,7 +39,7 @@ aside#side_nav {
 }
 
 div.side_nav_content {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -395,12 +395,12 @@ div.work__card img:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #273c75;
+    background-color: #1a5188;
 }
 
 .coding_skill,
 .design_skill {
-    flex-basis: 40rem;
+    flex-basis: 39rem;
     flex-grow: 1;
     padding: calc(1rem + 2vw);
     text-transform: uppercase;
@@ -408,13 +408,13 @@ div.work__card img:hover {
 
 .design_skill_title,
 .coding_skill_title {
-    font-size: 3rem;
+    font-size: calc(2rem + 1.3vw);
     margin-bottom: 2rem;
 }
 
 .coding_skill h4,
 .design_skill h4 {
-    font-size: 2rem;
+    font-size: calc(1.2rem + 1vw);
     color: white;
     margin-bottom: 1rem;
 }
@@ -487,7 +487,7 @@ div.work__card img:hover {
         width: 0%;
     }
     100% {
-        width: 70%;
+        width: 90%;
     }
 }
 
@@ -540,6 +540,79 @@ div.work__card img:hover {
     }
     100% {
         width: 70%;
+    }
+}
+
+
+/* testimonial Section */
+
+#testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-m);
+    padding: 2rem;
+}
+
+.testimonial-card {
+    flex-basis: 50rem;
+    flex-grow: 1;
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.5s ease-out;
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    transition: all 0.45s;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content-title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.card-content-para {
+    font-family: "indie Flower", cursive;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    background-color: hsl(225, 53%, 62%, 0.8);
+    padding: 2rem;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 80%;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform 0.4s ease-in;
+    color: white;
+}
+
+.testimonial-card:hover .card-content {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+.testimonial-card:hover .card_image {
+    transform: scale(0.95);
+    filter: sepia(40%);
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        width: 1400px;
+        margin: 0 auto;
     }
 }
 
